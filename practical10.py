@@ -1,33 +1,19 @@
-def incSalary(employee_list : list) -> list:
-    
-    for index in range(len(employee_list)):
+import math
 
-        emp = employee_list[index]
+def area(radius=None, length=None, width=None, side=None, height=None):
+    if(radius):
+        return math.pi * radius * radius
 
-        dsgn, salary = emp
+    elif(length and width):
+        return length * width
 
-        if (dsgn == "Manager"):
-            salary+=5000
+    elif(side):
+        return side*side
 
-        elif (dsgn == "General Manager"):
-            salary+=10000
-        
-        elif (dsgn == "CEO"):
-            salary+=20000
+    elif(height and width):
+        return (height * width)//2
 
-        elif (dsgn == "Worker"):
-            salary+=2000
-
-        else:
-            print("No Designation Found!!!!!!")
-    
-        employee_list[index] = (dsgn, salary)
-        
-    return employee_list
-
-
-employee_list = [("Manager", 50000), ("General Manager", 100000), ("CEO", 150000), ("Worker", 2000)]
-
-print(employee_list)
-
-print(incSalary(employee_list))
+print(f"Area of Square withe side 5 is {area(side=5)} unit sq.")
+print(f"Area of Circle with radius 7 is {area(radius=7)} unit sq.")
+print(f"Area of Recyangle with length 12 and width 4 is {area(length=12, width=4)} unit sq.")
+print(f"Area of Triangle with height 4 and width 2 is {area(height=4, width=2)} unit sq.")
