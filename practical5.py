@@ -1,8 +1,16 @@
-def factorial(num):
+def factorial_rec(num):
     if num == 1:
         return 1
 
     return num * factorial(num-1)
+
+def factorial(num):
+    res = 1
+
+    for num in range(1, num+1):
+        res*=num
+
+    return res
 
 num = int(input("Number:"))
 
