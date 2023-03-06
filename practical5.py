@@ -4,7 +4,7 @@ def factorial_rec(num):
 
     return num * factorial(num-1)
 
-def factorial(num):
+def factorial_iter(num):
     res = 1
 
     for num in range(1, num+1):
